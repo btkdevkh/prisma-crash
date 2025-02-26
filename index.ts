@@ -1,6 +1,6 @@
-import { PrismaClient } from "@prisma/client"
+import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 async function main() {
   // Create user
@@ -67,14 +67,52 @@ async function main() {
   //     id: 3,
   //   },
   // })
+  // Create axe
+  // const result = await prisma.axe.create({
+  //   data: {
+  //     nom: "Nombre de feuilles",
+  //     min: 3,
+  //     max: 999,
+  //   },
+  // });
+  // Upsert axe
+  // const result = await prisma.axe.upsert({
+  //   where: {
+  //     id: 8,
+  //   },
+  //   update: {
+  //     nom: "Nombre de feuilles",
+  //     min: 5,
+  //     max: 777,
+  //   },
+  //   create: {
+  //     nom: "Humidité",
+  //     min: 0,
+  //     max: 99,
+  //   },
+  // });
+  // Delete all axes
+  // const result = await prisma.axe.deleteMany();
+  // Update axe
+  // const result = await prisma.axe.update({
+  //   where: {
+  //     id: 6,
+  //   },
+  //   data: {
+  //     nom: "Nombre de feuilles",
+  //     min: 5,
+  //     max: 998,
+  //   },
+  // });
+  // console.log("result : ", result);
 }
 
 main()
   .then(async () => {
-    await prisma.$disconnect()
+    await prisma.$disconnect();
   })
   .catch(async (e) => {
-    console.error(e)
-    await prisma.$disconnect()
-    process.exit(1)
-  })
+    console.error(e);
+    await prisma.$disconnect();
+    process.exit(1);
+  });

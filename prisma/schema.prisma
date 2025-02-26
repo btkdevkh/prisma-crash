@@ -24,3 +24,11 @@ model Article {
   author User @relation(fields: [authorId], references: [id])
   authorId Int
 }
+
+model Axe {
+  id Int @id @default(autoincrement())
+  nom String
+  min Int
+  max Int
+  unite String?
+}

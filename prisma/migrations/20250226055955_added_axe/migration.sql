@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "Axe" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "min" INTEGER NOT NULL,
+    "max" INTEGER NOT NULL,
+    "unite" TEXT
+);
